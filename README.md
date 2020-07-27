@@ -76,6 +76,16 @@ After you're done, let's take a look at the `Toy`-related Django modules in `mai
 - **urls.py**
 - **views.py**
 
+models.py
+```python
+class Toy(models.Model):
+  name = models.CharField(max_length=50)
+  color = models.CharField(max_length=20)
+
+  def __str__(self):
+    return self.name
+```
+
 ## 3. Many-to-Many Relationships in RDBs
 
 Unlike MongoDB, which can easily implement both one and many-to-many relationships without much fuss, SQL databases need what is known as a **join table** to implement M:M relationships.
